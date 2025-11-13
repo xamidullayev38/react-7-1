@@ -17,7 +17,6 @@ class Timer extends Component {
     const { isStart } = this.state;
 
     if (!isStart) {
-      // START bosilganda intervalni ishga tushuramiz
       this.interval = setInterval(() => {
         this.setState((prev) => {
           let { hour, minut, second } = prev;
@@ -43,7 +42,6 @@ class Timer extends Component {
         });
       }, 1000);
     } else {
-      // STOP bosilganda intervalni to‘xtatamiz
       clearInterval(this.interval);
     }
 
